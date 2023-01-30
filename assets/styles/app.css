@@ -1,0 +1,195 @@
+
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.bureau {
+    background-color: #047A7C;
+    height: 96vh;
+}
+.menu{
+    padding-right: 5px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 4vh;
+    background-color: #BCBEBC;
+    border-top: 1px solid #FFFFFF;
+    border-left: 1px solid #7B7D7B;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #FCFEFC;
+    height: calc(4vh - 3px);
+    background-color: #BCBEBC;
+}
+.date{
+    margin-right: 40px;
+    padding-right: 5px;
+    padding-left: 2px;
+    display: flex;
+    height: 3vh;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+#time{
+
+}
+.start{
+    margin-left: 5px;
+    margin-top: 4px;
+    height: 3.3vh;
+}
+.doc{
+    width: 100px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: windows;
+    color: white;
+}
+.cv{
+    position: absolute;
+    left: 10px;
+    top: 95px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: windows;
+    color: white;
+}
+.contact{
+    position: absolute;
+    left: 10px;
+    top: 185px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: windows;
+    color: white;
+}
+.progDeploy{
+    position: absolute;
+    bottom: 13vh;
+    left: 165px;
+    background-color: #BCBEBC;
+    border-top: 1px solid #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+.l1, .l2, .l3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: windows;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    margin-right: 1px;
+}
+.l1:hover, .l2:hover, .l3:hover{
+    background-color: #00007B;
+    color: #FFFFFF;
+}
+.modal{
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 80%;
+    border-top: 1px solid ;
+    border-bottom: 1px solid ;
+    border-right: 1px solid ;
+    border-left: 1px solid ;
+    border-color: rgb(223, 223, 223) rgb(10, 10, 10) rgb(10, 10, 10) rgb(223, 223, 223);
+    background-color: #BCBEBC;
+    box-shadow: rgb(0 0 0 / 35%) 4px 4px 10px 0px, rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+}
+.topModal{
+    margin-top: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    font-family: windows;
+    background-color: #00007B;
+    color: #FFFFFF;
+}
+.leftTitreMod{
+    margin-left: 3px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.rightTitreMod{
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+}
+.contentMod{
+    height: 60vh;
+    margin-top: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    overflow-y: scroll;
+}
+.agMod{
+    width: calc(100% - 2px);
+    left: 0;
+    top: 0;
+}
+.agContentMod{
+    height: calc(96vh - 32px);
+}
+.agBureau{
+    height: calc(96vh);
+}
+
+.contArticles{
+    background-color: #BCBEBC;
+    font-family: windows;
+}
+.boxArticle{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    border-top: 1px solid ;
+    border-bottom: 1px solid ;
+    border-right: 1px solid ;
+    border-left: 1px solid ;
+    border-color: rgb(223, 223, 223) rgb(10, 10, 10) rgb(10, 10, 10) rgb(223, 223, 223);
+    background-color: #BCBEBC;
+    box-shadow: rgb(0 0 0 / 35%) 4px 4px 10px 0px, rgb(254 254 254) 1px 1px 0px 1px inset, rgb(132 133 132) -1px -1px 0px 1px inset;
+}
+.imgArticle{
+    display: flex;
+    justify-content: center;
+}
+.descriptionArticle{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}

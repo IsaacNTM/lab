@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleController!{% endblock %}
+
+{% block body %}
+
+<div class="contArticles">
+    {% for article in articles|sort((a, b) => a.ordre <=> b.ordre) %}
+        {% if article.link %}<a href="{{ article.link }}">{% endif %}
+        <div class="boxArticle">
+            <div class="imgArticle"><img src="img{{ article.image1 }}" style="width: 500px; height: 300px"></div>
+            <div class="descriptionArticle">
+                <div class="titreArticle"><b>{{ article.titre }}</b></div>
+                <div class="textArticle">{{ article.description }}</div>
+            </div>
+        </div>
+    {% if article.link %}</a>{% endif %}
+
+    {% endfor %}
+</div>
+{% endblock %}

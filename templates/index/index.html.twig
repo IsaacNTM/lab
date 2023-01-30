@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Theos-lab{% endblock %}
+
+{% block body %}
+
+    <div class="modal">
+        <div class="topModal">
+            <div class="leftTitreMod">
+                <img src="{{ asset('img/btn/doc.png') }}" style="width: 16px; height: 16px; margin-right: 2px">
+                <div class="titreModal">Projects</div>
+            </div>
+            <div class="rightTitreMod">
+                <img src="{{ asset('img/btn/reduire.png') }}" style="width: 16px; height: 16px">
+                <img src="{{ asset('img/btn/agrandir.png') }}" style="width: 16px; height: 16px; padding-right: 1px" class="agrandir">
+                <img src="{{ asset('img/btn/close.png') }}" style="width: 16px; height: 16px" class="close">
+            </div>
+
+        </div>
+        <div class="contentMod">
+            rrcef
+        </div>
+    </div>
+    <div class="bureau">
+        <div class="cv">
+            <img src="{{ asset('img/btn/cv.png') }}" style="width: 50px">
+            <div>C.V.</div>
+        </div>
+        <div class="doc">
+            <img src="{{ asset('img/btn/doc.png') }}" style="width: 50px">
+            <div>Projects</div>
+        </div>
+        <div class="contact">
+            <img src="{{ asset('img/btn/contact.png') }}" style="width: 50px">
+            <div>Contact</div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="programs"><img src="{{ asset('img/btn/programs.png') }}"></div>
+        <div class="documents"><img src="{{ asset('img/btn/documents.png') }}"></div>
+        <img src="{{ asset('img/btn/br.png') }}" style="width: 164px">
+        <div class="shut"><img src="{{ asset('img/btn/shut.png') }}"></div>
+    </div>
+    <div class="navbar">
+        <div class="tog">
+            <img src="{{ asset('img/btn/demarrer.png') }}" class="start">
+            <img src="{{ asset('img/btn/demarrer_c.png') }}" class="start" style="display: none">
+        </div>
+        <div class="date">
+            <img src="{{ asset('img/btn/date.png') }}">
+            <div id="time"></div>
+        </div>
+    </div>
+    <div class="progDeploy">
+        <div class="l1"><img src="{{ asset('img/btn/cine.png') }}" style="width: 32px; height: 32px; padding-right: 5px; padding-left: 5px">Cinémax</div>
+        <div class="l2"><img src="{{ asset('img/btn/qr.png') }}" style="width: 32px; height: 32px; padding-right: 5px; padding-left: 5px">CinéScanner  </div>
+        <div class="l3"><img src="{{ asset('img/btn/pizza.png') }}" style="width: 32px; height: 32px; padding-right: 5px; padding-left: 5px">PizzApp</div>
+    </div>
+    <script>
+        $('.menu').hide();
+        $('.tog').click(function (){
+            $('.menu').slideToggle('fast', function (){
+            });
+            $('.start',this).toggle();
+        });
+        $('.modal').hide();
+        $('.doc').click(function (){
+            $('.modal').show();
+            $('.contentMod').load('/article')
+        });
+        $('.cv').click(function (){
+            window.open('https://theos-lab.fr/CV', '_blank')
+        })
+        $('.close').click(function (){
+            $('.modal').hide();
+        })
+        var agrandir = 0;
+        $('.agrandir').click(function (){
+            if(agrandir === 0){
+                $('.modal').addClass('agMod');
+                $('.contentMod').addClass('agContentMod');
+                $('.bureau').addClass('agBureau');
+                agrandir = 1;
+            }else{
+                $('.modal').removeClass('agMod');
+                $('.contentMod').removeClass('agContentMod');
+                $('.bureau').removeClass('agBureau');
+                agrandir = 0;
+            }
+
+        })
+
+
+        $('.progDeploy').hide();
+        var img = $('.start');
+        console.log(img);
+        $('.l2').hover(function (){
+            $('.l2').html('<img src="{{ asset('img/btn/qr_w.png') }}" style="width: 32px; height: 32px; padding-right: 5px; padding-right: 5px; padding-left: 5px">CinéScanner')
+        }, function (){
+            $('.l2').html('<img src="{{ asset('img/btn/qr.png') }}" style="width: 32px; height: 32px; padding-right: 5px; padding-right: 5px; padding-left: 5px">CinéScanner')
+
+        })
+        $('.documents').hover(function (){
+            $('.documents').html('<img src="{{ asset('img/btn/documents_h.png') }}">')
+        }, function (){
+            $('.documents').html('<img src="{{ asset('img/btn/documents.png') }}">')
+        })
+        $('.programs').hover(function (){
+            $('.programs').html('<img src="{{ asset('img/btn/programs_h.png') }}">');
+            $('.progDeploy').show();
+        }, function (){
+            $('.programs').html('<img src="{{ asset('img/btn/programs.png') }}">')
+            $('.progDeploy').hide();
+        })
+    </script>
+{% endblock %}

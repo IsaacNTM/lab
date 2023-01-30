@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "windows";
+    src: url("font/win.ttf");
+}
+#time{
+    font-family: windows;
+    font-size: 0.9rem;
+}
